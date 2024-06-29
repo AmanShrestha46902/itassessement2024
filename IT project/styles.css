@@ -1,0 +1,146 @@
+/* Import a cool font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #cd1943;
+  --secondary-color: #720303;
+  --background-color: #e0f7fa;
+  --text-color: #333;
+  --white-color: #ffffff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgb(3, 0, 0);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--secondary-color);
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  border-top: 2px solid var(--secondary-color);
+ 
+}
+footer p {
+  margin: 5px 0;
+}
+
+#banner {
+  text-align: center;
+  padding: 50px 0;
+  background: url('banner.jpg') no-repeat center center/cover;
+  color: var(--white-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+#introduction {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  justify-content: center;
+}
+
+.thumbnails a {
+  display: inline-block;
+  border: 2px solid var(--secondary-color);
+}
+
+.thumbnails img {
+  width: 100%;
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form label, form input, form textarea, form button {
+  width: 100%;
+  margin: 5px 0;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .thumbnails {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  main {
+    padding: 10px;
+  }
+}
